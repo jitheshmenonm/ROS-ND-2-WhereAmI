@@ -23,49 +23,47 @@
       />
     </inertial>
 
-    <collision name='collision'>
+   <collision name='chasis_collision'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/> 
       <geometry>
-        <box size=".6 .2 .1"/>
+        <box size=".4 .2 .1"/>
       </geometry>
     </collision>
 
     <visual name='chassis_visual'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
-        <box size=".6 .2 .1"/>
-      </geometry>      
+        <box size=".4 .2 .1"/>
+      </geometry>
     </visual>
 
-
     <collision name='back_caster_collision'>
-      <origin xyz="-0.15 0 -0.1" rpy=" 0 0 0"/>
+      <origin xyz="-0.15 0 -0.05" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.1"/>
+        <sphere radius="0.0499"/>
       </geometry>
     </collision>
 
     <visual name='back_caster_visual'>
-      <origin xyz="-0.15 0 -0.1" rpy=" 0 0 0"/>
+      <origin xyz="-0.15 0 -0.05" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.1"/>
+        <sphere radius="0.05"/>
       </geometry>
     </visual>
 
     <collision name='front_caster_collision'>
-      <origin xyz="0.15 0 -0.1" rpy=" 0 0 0"/>
+      <origin xyz="0.15 0 -0.05" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.1"/>
+        <sphere radius="0.0499"/>
       </geometry>
     </collision>
 
     <visual name='front_caster_visual'>
-      <origin xyz="0.15 0 -0.1" rpy=" 0 0 0"/>
+      <origin xyz="0.15 0 -0.05" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.1"/>
+        <sphere radius="0.05"/>
       </geometry>
-    </visual>
-
+    </visual>        
   </link>
   <link name='left_wheel'>
   <pose>0 0 0.1 0 0 0</pose>
@@ -82,14 +80,14 @@
     <collision name='left_wheel_collision'>
       <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
       <geometry>
-        <cylinder radius=".2" length="0.05"/>
+        <cylinder radius=".1" length="0.05"/>
       </geometry>
     </collision>
 
     <visual name='left_wheel_visual'>
       <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
       <geometry>
-        <cylinder radius=".2" length="0.05"/>
+        <cylinder radius=".1" length="0.05"/>
       </geometry>      
     </visual>
    </link>
@@ -116,14 +114,14 @@
     <collision name='right_wheel_collision'>
       <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
       <geometry>
-        <cylinder radius=".2" length="0.05"/>
+        <cylinder radius=".1" length="0.05"/>
       </geometry>
     </collision>
 
     <visual name='right_wheel_visual'>
       <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
       <geometry>
-        <cylinder radius=".2" length="0.05"/>
+        <cylinder radius=".1" length="0.05"/>
       </geometry>      
     </visual>
    </link>
@@ -162,7 +160,7 @@
     </visual>
    </link>
    <joint type="fixed" name="camera_joint">
-     <origin xyz="0.3 0 0" rpy="0 0 0"/>
+     <origin xyz="0.2 0 0" rpy="0 0 0"/>
      <child link="camera"/>
      <parent link="chassis"/>
      <axis xyz="0 1 0" rpy="0 0 0"/>     
