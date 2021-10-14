@@ -12,13 +12,20 @@
   <param name="odom_model_type" value="diff-corrected"/>
   <param name="base_frame_id" value="robot_footprint"/>
   <param name="global_frame_id" value="map"/>
-  <param name="max_particles" value="100"/>
-   
   
-<!-- If you choose to define initial pose here -->
-    <param name="initial_pose_x" value="-8.0"/>
-    <param name="initial_pose_y" value="8.0"/>
-    <param name="initial_pose_a" value="0.0"/>
+  <param name="max_particles" value="50"/>
+  <param name="max_particles" value="200"/>
+  <param name="odom_alpha1" value="0.1"/>
+  <param name="odom_alpha2" value="0.1"/>
+  <param name="odom_alpha3" value="0.1"/>
+  <param name="odom_alpha4" value="0.1"/>
+
+  <param name="initial_pose_x" value="-8.0"/>
+  <param name="initial_pose_y" value="8.0"/>
+  <param name="initial_pose_a" value="0.0"/>
+
+  <param name="initial_cov_xx" value="0.0625"/>
+  <param name="initial_cov_yy" value="0.0625"/>
 </node>
 
 </launch>
